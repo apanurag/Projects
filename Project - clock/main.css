@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: "Courier New", Courier, monospace;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-size: 100% 100%;
+}
+.slider {
+  background-color: rgba(250, 235, 215, 0.014);
+
+  position: relative;
+  margin: left;
+}
+#btn1 {
+  background-color: blueviolet;
+}
+#btn2 {
+  background-color: rgb(237, 234, 240);
+}
+.btn {
+  border: 0;
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: rgb(102, 102, 206);
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
+  box-shadow: 20px;
+}
+.btn:hover {
+  background-color: rgba(0, 0, 255, 0.637);
+  transition-duration: 4ms;
+}
+
+.clock {
+  background-color: burlywood;
+  background-image: url(images/toppng.com-ghost-720x720.png);
+  background-size: 100%;
+  height: 250px;
+  width: 250px;
+  position: relative;
+  text-align: center;
+  display: flex;
+  border-radius: 50%;
+  border: 3px solid gold;
+  box-shadow: 1px 1px 4px royalblue;
+  z-index: 1;
+}
+.number div {
+  font-size: 30px;
+  position: absolute;
+  font-weight: bold;
+  color: rgb(71, 66, 53);
+}
+
+.twelve {
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.three {
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.six {
+  bottom: 6px;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+.nine {
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.hands {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.hands::before {
+  content: " ";
+  width: 25px;
+  height: 25px;
+  background-color: burlywood;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.hands div {
+  background-color: rgb(44, 42, 42);
+  width: 7px;
+  position: absolute;
+
+  border-radius: 60% 60% 0 0;
+  transform-origin: bottom center;
+  bottom: 50%;
+}
+
+.hands .hour {
+  height: 50px;
+  transform: rotate(90deg);
+  z-index: 2;
+}
+.hands .min {
+  height: 60px;
+  transform: rotate(18deg);
+  z-index: 1;
+}
+.hands .sec {
+  height: 80px;
+  transform: rotate(180deg);
+  background-color: gold;
+  z-index: 3;
+}
